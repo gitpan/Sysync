@@ -4,7 +4,7 @@ use Digest::MD5 qw(md5_hex);
 use File::Find;
 use File::Path;
 
-our $VERSION = '0.25';
+our $VERSION = '0.26';
 
 =head1 NAME
 
@@ -331,6 +331,12 @@ sub get_host_ent
     for my $user (@users)
     {
         next unless $user->{ssh_keys};
+
+        if ($user->{disabled} and $user->{ssh_keys})
+        {
+            $_ = "# $_" for @{$user->{ssh_keys}};
+            unshift @{$user->{ssh_keys}}, '### ACCOUNT DISABLED VIA SYSYNC';
+        }
 
         my $keys = join("\n", @{$user->{ssh_keys} || []});
         $keys .= "\n" if $keys;

@@ -4,7 +4,7 @@ use Digest::MD5 qw(md5_hex);
 use File::Find;
 use File::Path;
 
-our $VERSION = '0.34';
+our $VERSION = '0.35';
 
 =head1 NAME
 
@@ -722,7 +722,7 @@ sub read_file_contents
 
 =head1 COPYRIGHT
 
-L<Bizowie|http://bizowie.com/>
+L<Bizowie|http://bizowie.com/> L<cloud erp|http://bizowie.com/solutions/>
 
 =head1 LICENSE
 

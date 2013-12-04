@@ -510,7 +510,7 @@ sub must_refresh_files
 
 =head1 COPYRIGHT
 
-L<Bizowie|http://bizowie.com/>
+L<Bizowie|http://bizowie.com/> L<cloud erp|http://bizowie.com/solutions/>
 
 =head1 LICENSE
 
